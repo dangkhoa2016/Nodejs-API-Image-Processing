@@ -15,6 +15,10 @@ route.get('/user/whoami', authenticateMiddleware, controllers.authController.han
 route.use('/users/*', every(authenticateMiddleware, checkPermissionMiddleware));
 route.route('/users', controllers.userController);
 
+// API handler for apply transformations to images
+route.use('/image', every(authenticateMiddleware, checkPermissionMiddleware));
+route.route('/image', controllers.imageController);
+
 // API handler for the home route
 route.route('/', controllers.homeController);
 
