@@ -6,7 +6,7 @@ const path = require('path');
 const mime = require('hono/utils/mime');
 const fs = require('fs');
 
-controller.get('/', (context) => context.json({ message: 'Welcome to the Node.js API Authentication' }));
+controller.get('/', (context) => context.json({ message: 'Welcome to the Node.js API Image Processing' }));
 
 const publicFolder = path.join(__dirname, '../../public');
 
